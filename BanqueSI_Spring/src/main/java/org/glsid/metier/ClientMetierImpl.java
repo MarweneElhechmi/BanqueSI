@@ -7,15 +7,15 @@ import org.glsid.entities.Client;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-//Pour considerer que cette classe comme un bean Spring
-//Générélement pour les objets de la couche métier
+//Pour considerer que cette classe comme un bean Spring on utilise @Service
+//Générélement on utilise @Service pour les objets de la couche métier
 //Injection des dépendances via XML ou annotations
 //On peut utiliser aussi @Component
 //Si on ne fait pas @Service ou @Component , @Autowired ne vas pas marcher
 @Service
 public class ClientMetierImpl implements ClientMetier{
 	//Autowired pour implementer automatiquement l'interface Repository
-	//Spring injecter une implementation 
+	//Spring injecte une implementation 
 	@Autowired 
 	private ClientRepository clientRepository;
 	
