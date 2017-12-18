@@ -16,6 +16,10 @@ public class EmployeRestService {
 	@Autowired
 	private EmployeMetier employeMetier ;
 	
+	//Si on utilise pas @RequestBody
+	// Il récupére pas les données qui se trouvent dans le corps de la requette 
+	
+	
 	@RequestMapping(value="/employes",method=RequestMethod.POST)
 	public Employe saveEmploye(@RequestBody Employe employe) {
 		return employeMetier.saveEmploye(employe);
