@@ -56,6 +56,7 @@ public class Employe implements Serializable{
 	public Collection<Groupe> getGroupes() {
 		return groupes;
 	}
+	@JsonSetter
 	public void setGroupes(Collection<Groupe> groupes) {
 		this.groupes = groupes;
 	}
