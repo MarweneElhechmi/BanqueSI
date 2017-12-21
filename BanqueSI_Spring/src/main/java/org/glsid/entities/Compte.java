@@ -31,6 +31,10 @@ public abstract class Compte implements Serializable{
 	
 	/****************************************************************/
 	
+	// @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"}) ; on l'a utiliser si une balise ne se met pas
+	
+	// en format JSON
+	
 	// JPA fait le mapping Objet -- XML. ( @Inheritance ,  @DiscriminatorColumn , @DiscriminatorValue )
 
 	// @JsonTypeInfo mapping Objet -- JSON.
