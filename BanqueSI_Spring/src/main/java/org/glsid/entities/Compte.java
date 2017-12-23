@@ -14,7 +14,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonSubTypes.Type;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
@@ -108,11 +110,11 @@ public abstract class Compte implements Serializable{
 	public void setEmploye(Employe employe) {
 		this.employe = employe;
 	}
-
+	@JsonIgnore
 	public Collection<Operation> getOperations() {
 		return operations;
 	}
-
+	@JsonSetter
 	public void setOperations(Collection<Operation> operations) {
 		this.operations = operations;
 	}
