@@ -1,5 +1,8 @@
 package org.glsid.services;
 
+import java.util.List;
+
+import org.glsid.entities.Operation;
 import org.glsid.metier.OperationMetier;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -39,6 +42,11 @@ public class OperationRestService {
 			@RequestParam double montant, 
 			@RequestParam Long codeEmploye) {
 		return operationsMetier.virement(compte1, compte2, montant, codeEmploye);
+	}
+
+	@RequestMapping(value="/virements",method=RequestMethod.GET)
+	public List<Operation> listOperation() {
+		return operationsMetier.listOperation();
 	}
 	
 	

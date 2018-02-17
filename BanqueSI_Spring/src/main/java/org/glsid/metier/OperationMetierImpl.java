@@ -1,6 +1,7 @@
 package org.glsid.metier;
 
 import java.util.Date;
+import java.util.List;
 
 import org.glsid.dao.CompteRepository;
 import org.glsid.dao.EmployeRepository;
@@ -111,6 +112,12 @@ public class OperationMetierImpl implements OperationMetier{
 		verser(compte2, montant, codeEmploye);
 		
 		return true;
+	}
+
+	@Override
+	public List<Operation> listOperation() {
+		// TODO Auto-generated method stub
+		return operationRepository.findAll();
 	}
 
 
