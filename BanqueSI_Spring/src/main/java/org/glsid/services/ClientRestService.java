@@ -51,7 +51,7 @@ public class ClientRestService {
 	
 	/*************************************************/
 	
-	@RequestMapping(value="/clients",method=RequestMethod.POST)
+	@RequestMapping(value="/client",method=RequestMethod.POST)
 	public Client saveClient(@RequestBody Client client) {
 		return clientMetier.saveClient(client);
 	}
